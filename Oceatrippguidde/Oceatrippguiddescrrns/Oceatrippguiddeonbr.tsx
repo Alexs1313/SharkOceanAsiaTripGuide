@@ -1,6 +1,14 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {useEffect, useRef, useState} from 'react';
-import {Animated, Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import {
+  Animated,
+  Image,
+  Platform,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 
 import Oceatrippguiddelayoutt from '../Oceatrippguiddecpnts/Oceatrippguiddelayoutt';
 import LinearGradient from 'react-native-linear-gradient';
@@ -8,7 +16,10 @@ import LinearGradient from 'react-native-linear-gradient';
 const oceatrippguidData = [
   {
     id: 1,
-    label: 'Welcome to Shark Trip Guide Ocean',
+    label:
+      Platform.OS === 'ios'
+        ? 'Welcome to Shark Trip Guide Ocean'
+        : 'Welcome to Shark Ocean Asia Trip Guide',
     title:
       'Hey, I’m your shark guide. I’ll take you through the best ocean and sea resorts across Asia. Let’s explore the deep and the shore together.',
     image: require('../../assets/i/oceatrippguon1.png'),
