@@ -19,11 +19,13 @@ type OceatrippguidRootNav = {
 
 const Oceatrippguiddeblog = () => {
   const oceatrippguidNavigation = useNavigation<OceatrippguidRootNav>();
-  const oceatrippguidStackNav =
-    oceatrippguidNavigation.getParent?.() as OceatrippguidRootNav | undefined;
+  const oceatrippguidStackNav = oceatrippguidNavigation.getParent?.() as
+    | OceatrippguidRootNav
+    | undefined;
   const oceatrippguidIsFocused = useIsFocused();
-  const [oceatrippguidLikedIds, oceatrippguidSetLikedIds] =
-    useState<string[]>([]);
+  const [oceatrippguidLikedIds, oceatrippguidSetLikedIds] = useState<string[]>(
+    [],
+  );
 
   useEffect(() => {
     if (!oceatrippguidIsFocused) {
@@ -77,12 +79,11 @@ const Oceatrippguiddeblog = () => {
                 <View style={styles.oceatrippguidActionsRow}>
                   <Oceatrippguiddeanimpress
                     onPress={() =>
-                      (oceatrippguidStackNav ?? oceatrippguidNavigation).navigate(
-                        'Oceatrippguiddeblogdet',
-                        {
-                          blogId: oceatrippguidPost.id,
-                        },
-                      )
+                      (
+                        oceatrippguidStackNav ?? oceatrippguidNavigation
+                      ).navigate('Oceatrippguiddeblogdet', {
+                        blogId: oceatrippguidPost.id,
+                      })
                     }
                     style={styles.oceatrippguidMoreWrap}
                     contentStyle={styles.oceatrippguidMoreBtn}>
@@ -92,7 +93,9 @@ const Oceatrippguiddeblog = () => {
                   {oceatrippguidPost.isLiked && (
                     <Oceatrippguiddeanimpress
                       onPress={async () => {
-                        const next = await toggleLikedBlogId(oceatrippguidPost.id);
+                        const next = await toggleLikedBlogId(
+                          oceatrippguidPost.id,
+                        );
                         oceatrippguidSetLikedIds(oceatrippguidPrev =>
                           next
                             ? Array.from(
@@ -170,7 +173,7 @@ const styles = StyleSheet.create({
     height: 2,
     backgroundColor: '#044874',
     marginTop: 12,
-    marginBottom: 12,
+    marginBottom: 13,
   },
   oceatrippguidCardText: {
     color: '#FFFFFF',
