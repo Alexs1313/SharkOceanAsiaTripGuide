@@ -2,7 +2,7 @@ import Oceatrippguiddelayoutt from '../Oceatrippguiddecpnts/Oceatrippguiddelayou
 
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Image, Platform, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 import Oceatrippguiddeanimpress from '../Oceatrippguiddecpnts/Oceatrippguiddeanimpress';
@@ -29,15 +29,12 @@ const Oceatrippguiddequz = () => {
           <LinearGradient
             colors={['#009BFF', '#005D99']}
             style={styles.oceatrippguidHeaderTitlePill}>
-            <View style={{paddingHorizontal: 9}}>
+            <View style={{paddingHorizontal: 14}}>
               <Text style={styles.oceatrippguidHeaderTitle}>
-                {Platform.OS === 'ios'
-                  ? 'Welcome to Shark Trip Guide Ocean'
-                  : 'Welcome to Shark Ocean Asia Trip Guide'}
+                Welcome to Shark Trip Guide Ocean
               </Text>
             </View>
           </LinearGradient>
-          <Image source={require('../../assets/i/oceatrippguohead2.png')} />
         </View>
 
         <View style={styles.oceatrippguidQuizHero}>

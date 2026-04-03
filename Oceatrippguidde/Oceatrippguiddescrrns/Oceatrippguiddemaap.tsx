@@ -14,7 +14,6 @@ import {
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {
   Image,
-  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -158,15 +157,12 @@ const Oceatrippguiddemaap = () => {
           <LinearGradient
             colors={['#009BFF', '#005D99']}
             style={styles.oceatrippguidHeaderTitlePill}>
-            <View style={{paddingHorizontal: 9}}>
+            <View style={{paddingHorizontal: 14}}>
               <Text style={styles.oceatrippguidHeaderTitle}>
-                {Platform.OS === 'ios'
-                  ? 'Welcome to Shark Trip Guide Ocean'
-                  : 'Welcome to Shark Ocean Asia Trip Guide'}
+                Welcome to Shark Trip Guide Ocean
               </Text>
             </View>
           </LinearGradient>
-          <Image source={require('../../assets/i/oceatrippguohead2.png')} />
         </View>
 
         <View style={styles.oceatrippguidTabsRow}>

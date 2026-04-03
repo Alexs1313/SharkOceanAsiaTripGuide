@@ -2,7 +2,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 import {useNavigation, useRoute} from '@react-navigation/native';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
-import {Image, Platform, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 
 import Oceatrippguiddelayoutt from '../Oceatrippguiddecpnts/Oceatrippguiddelayoutt';
 
@@ -14,11 +14,9 @@ type RouteParams = {questions?: QuizQuestion[]};
 const Oceatrippguiddequzpla = () => {
   const oceatrippguidNavigation = useNavigation<any>();
   const oceatrippguidRoute = useRoute<any>();
-  const oceatrippguidQuestions = ((oceatrippguidRoute?.params as
-    | RouteParams
-    | undefined
-  )?.questions ??
-    []) as QuizQuestion[];
+  const oceatrippguidQuestions = ((
+    oceatrippguidRoute?.params as RouteParams | undefined
+  )?.questions ?? []) as QuizQuestion[];
 
   const [oceatrippguidIdx, setOceatrippguidIdx] = useState(0);
   const [oceatrippguidSelectedId, setOceatrippguidSelectedId] = useState<
@@ -26,11 +24,10 @@ const Oceatrippguiddequzpla = () => {
   >(null);
   const [oceatrippguidLocked, setOceatrippguidLocked] = useState(false);
   const [oceatrippguidScore, setOceatrippguidScore] = useState(0);
-  const [oceatrippguidSecondsLeft, setOceatrippguidSecondsLeft] =
-    useState(15);
-  const oceatrippguidTimerRef = useRef<
-    ReturnType<typeof setInterval> | null
-  >(null);
+  const [oceatrippguidSecondsLeft, setOceatrippguidSecondsLeft] = useState(15);
+  const oceatrippguidTimerRef = useRef<ReturnType<typeof setInterval> | null>(
+    null,
+  );
 
   const oceatrippguidCurrent = oceatrippguidQuestions[oceatrippguidIdx];
   const oceatrippguidTotal = oceatrippguidQuestions.length;
@@ -115,15 +112,12 @@ const Oceatrippguiddequzpla = () => {
         <LinearGradient
           colors={['#009BFF', '#005D99']}
           style={styles.oceatrippguidHeaderTitlePill}>
-          <View style={{paddingHorizontal: 9}}>
+          <View style={{paddingHorizontal: 14}}>
             <Text style={styles.oceatrippguidHeaderTitle}>
-              {Platform.OS === 'ios'
-                ? 'Welcome to Shark Trip Guide Ocean'
-                : 'Welcome to Shark Ocean Asia Trip Guide'}
+              Welcome to Shark Trip Guide Ocean
             </Text>
           </View>
         </LinearGradient>
-        <Image source={require('../../assets/i/oceatrippguohead2.png')} />
       </View>
     );
   }, []);

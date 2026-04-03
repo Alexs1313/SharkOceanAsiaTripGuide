@@ -23,8 +23,8 @@ const Oceatrippguiddeplcesdet = () => {
   const [oceatrippguidIsSaved, setOceatrippguidIsSaved] = useState(false);
 
   const oceatrippguidPlace: OceatrippguidPlace = useMemo(() => {
-    const params = (oceatrippguidRoute?.params as RouteParams | undefined) ??
-      undefined;
+    const params =
+      (oceatrippguidRoute?.params as RouteParams | undefined) ?? undefined;
 
     const placeId = params?.placeId;
     const placeFromId = placeId
@@ -104,15 +104,12 @@ const Oceatrippguiddeplcesdet = () => {
           <LinearGradient
             colors={['#009BFF', '#005D99']}
             style={styles.oceatrippguidHeaderTitlePill}>
-            <View style={{paddingHorizontal: 9}}>
+            <View style={{paddingHorizontal: 14}}>
               <Text style={styles.oceatrippguidHeaderTitle}>
-                {Platform.OS === 'ios'
-                  ? 'Welcome to Shark Trip Guide Ocean'
-                  : 'Welcome to Shark Ocean Asia Trip Guide'}
+                Welcome to Shark Trip Guide Ocean
               </Text>
             </View>
           </LinearGradient>
-          <Image source={require('../../assets/i/oceatrippguohead2.png')} />
         </View>
 
         <View style={styles.oceatrippguidDetCard}>

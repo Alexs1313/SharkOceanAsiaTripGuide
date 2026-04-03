@@ -109,7 +109,10 @@ const Oceatrippguiddeload = () => {
         }}
         showsVerticalScrollIndicator={false}>
         <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
-          <Image source={require('../../assets/i/oceatrippguloadic.png')} />
+          <Image
+            source={require('../../assets/i/oceatrippguloadico.png')}
+            style={{width: 250, height: 250, borderRadius: 52}}
+          />
         </View>
 
         <View

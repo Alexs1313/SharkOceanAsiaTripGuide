@@ -79,7 +79,7 @@ android {
 
     namespace "com.sharkoceanasiatripguide"
     defaultConfig {
-        applicationId "com.sharkoceanasiatripguide"
+        applicationId "com.sharktripguideocean"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
