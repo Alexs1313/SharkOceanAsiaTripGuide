@@ -77,7 +77,7 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.sharkoceanasiatripguide"
+    namespace "com.sharktripguideocean"
     defaultConfig {
         applicationId "com.sharktripguideocean"
         minSdkVersion rootProject.ext.minSdkVersion
