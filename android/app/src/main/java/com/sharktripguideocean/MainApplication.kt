@@ -1,4 +1,4 @@
-package com.sharktripguideocean
+package com.shark.tripp.guide.ocean
 
 import android.app.Application
 import com.facebook.react.PackageList

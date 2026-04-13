@@ -1,4 +1,4 @@
-package com.sharktripguideocean
+package com.shark.tripp.guide.ocean
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
